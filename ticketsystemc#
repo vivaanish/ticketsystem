@@ -1,23 +1,21 @@
-using System;
-
-class Program
-{
-    static void Main()
-    {
-        Console.WriteLine("Welcome to the Theatre Ticket System!");
-        int seats = GetInput("Enter seats: ");
-        int area = GetInput("Enter area (1-4): ");
-        int price = area == 1 ? 24 : area == 2 ? 30 : area == 3 ? 27 : area == 4 ? 20 : 0;
-
-        if (price == 0)
-            Console.WriteLine("Invalid area.");
-        else
-            Console.WriteLine($"Total: £{seats * price}");
-    }
-
-    static int GetInput(string prompt)
-    {
-        Console.Write(prompt);
-        return int.TryParse(Console.ReadLine(), out int result) ? result : 0;
-    }
-}
+GitHub Description: Theatre Ticket System Console Application
+This is a simple C# console application for a theatre ticket booking system. The program allows users to input the number of seats required and select a seating area (using codes 1 to 4). It calculates and displays the total cost of the tickets based on the provided pricing plan. The application includes input validation to ensure valid seat numbers and area codes, providing clear error messages for incorrect inputs. Ideal for demonstrating basic user input handling, conditional logic, and calculation in a console-based environment.
+Features:
+Accepts user input for number of seats and seating area (1-4).
+Calculates ticket cost based on a predefined pricing plan.
+Validates inputs and handles errors gracefully.
+Displays the total cost with a clear breakdown.
+Pricing Plan:
+Area 1: $50 per seat
+Area 2: $40 per seat
+Area 3: $30 per seat
+Area 4: $20 per seat
+Usage:
+Run the program, enter the number of seats, and select a seating area code (1-4). The program outputs the total ticket cost or an error message for invalid inputs.
+Technologies:
+C# (.NET Console Application)
+How to Run:
+Clone the repository.
+Open in Visual Studio or any C# IDE.
+Build and run the solution.
+Contributions and feedback are welcome!
